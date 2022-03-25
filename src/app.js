@@ -29,3 +29,10 @@ for (const student of students) {
 }
 
 console.log(studentsScholarship)
+
+//part 4
+function selectDarkTheme(){
+    const DarkTheme = document.querySelector('div')
+    return DarkTheme.classList.add('dark-theme')
+}
+console.log(selectDarkTheme())
