@@ -16,8 +16,15 @@ const students = [
 const studentsScholarship = []
   
 for (const student of students) {
+    function findSum() {
+        let sum = 0
+        for (grade of student.grades) {
+            sum += grade
+        }
+        return sum
+    }
     function findAverage() {
-        let avg = student.grades.reduce((x,y) => x +y, 0) / student.grades.length;
+        let avg = findSum(student.grades)/ student.grades.length;
         return avg
     }
 
