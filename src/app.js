@@ -17,7 +17,7 @@ const studentsScholarship = []
   
 for (const student of students) {
     function findAverage() {
-        var avg = student.grades.reduce((x,y) => x +y, 0) / student.grades.length;
+        let avg = student.grades.reduce((x,y) => x +y, 0) / student.grades.length;
         return avg
     }
 
