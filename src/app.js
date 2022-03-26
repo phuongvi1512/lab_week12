@@ -15,26 +15,27 @@ const students = [
   
 const studentsScholarship = []
   
-for (const student of students) {
-    function findSum() {
-        let sum = 0
-        for (grade of student.grades) {
-            sum += grade
-        }
-        return sum
-    }
-    function findAverage() {
-        let avg = findSum(student.grades)/ student.grades.length;
-        return avg
-    }
 
-    let average = findAverage()
-    if(average >= 80){
-        const goodStudent = {name: student.name, gradeAvg: average}
+function findSum(array) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    }
+    return sum
+}
+
+function findAvg(array) {
+    let Avg = findSum(array)/array.length
+    return Avg
+}
+
+for (const student of students) {
+    Avg = findAvg(student.grades)
+    if(Avg >= 80){
+        const goodStudent = {name: student.name, gradeAvg: Avg}
         studentsScholarship.push(goodStudent)
         }
 }
-
 console.log(studentsScholarship)
 
 //part 4
