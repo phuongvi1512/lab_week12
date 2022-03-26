@@ -14,18 +14,13 @@ const students = [
   ]
   
 const studentsScholarship = []
-  
-
-function findSum(array) {
-    let sum = 0
-    for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-    }
-    return sum
-}
 
 function findAvg(array) {
-    let Avg = findSum(array)/array.length
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    let Avg = sum/array.length
     return Avg
 }
 
